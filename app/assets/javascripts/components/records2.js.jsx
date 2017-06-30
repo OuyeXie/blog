@@ -5,17 +5,17 @@ var Records2 = React.createClass({
     },
 
     propTypes: {
-        data: React.PropTypes.array.isRequired
+        records: React.PropTypes.array.isRequired
     },
 
     componentDidMount: function() {
-       this.setState({records: this.props.data})
+       this.setState({records: this.props.records})
     },
 
     render: function () {
         console.log(this.props)
 
-        var records = this.props.data.map(function(record) {
+        var records = this.props.records.map(function(record) {
             return (<Record2 key={record.title} record={record} />)
         });
 
